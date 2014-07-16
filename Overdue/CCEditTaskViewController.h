@@ -15,7 +15,7 @@
 
 @end
 
-@interface CCEditTaskViewController : UIViewController
+@interface CCEditTaskViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) CCTask *task;
 @property (weak, nonatomic) id <CCEditTaskViewControllerDelegate> delegate;

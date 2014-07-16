@@ -52,6 +52,7 @@
         NSIndexPath *path = sender;
         CCTask *taskObject = self.taskObjects[path.row];
         detailTaskViewController.task = taskObject;
+        detailTaskViewController.delegate = self;
     }
 }
 
@@ -102,6 +103,14 @@
 -(void)didCancel
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - CCDetailTaskViewControllerDelegate
+
+-(void)updateTask
+{
+    [self saveTasks];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Helper Methods

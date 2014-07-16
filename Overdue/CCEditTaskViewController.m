@@ -31,6 +31,9 @@
     self.textField.text = self.task.title;
     self.textView.text = self.task.description;
     self.datePicker.date = self.task.date;
+    
+    self.textView.delegate = self;
+    self.textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,4 +53,22 @@
     self.task.description = self.textView.text;
     self.task.date = self.datePicker.date;
 }
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.textField resignFirstResponder];
+    return YES;
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [self.textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
 @end
