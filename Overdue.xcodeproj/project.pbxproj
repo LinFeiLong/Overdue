@@ -21,6 +21,10 @@
 		022B97D219764881003CF3E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B97B419764881003CF3E6 /* UIKit.framework */; };
 		022B97DA19764881003CF3E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022B97D819764881003CF3E6 /* InfoPlist.strings */; };
 		022B97DC19764881003CF3E6 /* OverdueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 022B97DB19764881003CF3E6 /* OverdueTests.m */; };
+		022B97E7197648FE003CF3E6 /* CCAddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022B97E6197648FE003CF3E6 /* CCAddTaskViewController.m */; };
+		022B97EA1976490E003CF3E6 /* CCDetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022B97E91976490E003CF3E6 /* CCDetailTaskViewController.m */; };
+		022B97ED19764918003CF3E6 /* CCEditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022B97EC19764918003CF3E6 /* CCEditTaskViewController.m */; };
+		022B97F1197653DD003CF3E6 /* CCTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 022B97F0197653DD003CF3E6 /* CCTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		022B97D719764881003CF3E6 /* OverdueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OverdueTests-Info.plist"; sourceTree = "<group>"; };
 		022B97D919764881003CF3E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		022B97DB19764881003CF3E6 /* OverdueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OverdueTests.m; sourceTree = "<group>"; };
+		022B97E5197648FE003CF3E6 /* CCAddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAddTaskViewController.h; sourceTree = "<group>"; };
+		022B97E6197648FE003CF3E6 /* CCAddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAddTaskViewController.m; sourceTree = "<group>"; };
+		022B97E81976490E003CF3E6 /* CCDetailTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDetailTaskViewController.h; sourceTree = "<group>"; };
+		022B97E91976490E003CF3E6 /* CCDetailTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDetailTaskViewController.m; sourceTree = "<group>"; };
+		022B97EB19764918003CF3E6 /* CCEditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEditTaskViewController.h; sourceTree = "<group>"; };
+		022B97EC19764918003CF3E6 /* CCEditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEditTaskViewController.m; sourceTree = "<group>"; };
+		022B97EF197653DD003CF3E6 /* CCTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTask.h; sourceTree = "<group>"; };
+		022B97F0197653DD003CF3E6 /* CCTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,13 @@
 				022B97C219764881003CF3E6 /* Main.storyboard */,
 				022B97C519764881003CF3E6 /* CCViewController.h */,
 				022B97C619764881003CF3E6 /* CCViewController.m */,
+				022B97E5197648FE003CF3E6 /* CCAddTaskViewController.h */,
+				022B97E6197648FE003CF3E6 /* CCAddTaskViewController.m */,
+				022B97E81976490E003CF3E6 /* CCDetailTaskViewController.h */,
+				022B97E91976490E003CF3E6 /* CCDetailTaskViewController.m */,
+				022B97EB19764918003CF3E6 /* CCEditTaskViewController.h */,
+				022B97EC19764918003CF3E6 /* CCEditTaskViewController.m */,
+				022B97EE197653C0003CF3E6 /* Models */,
 				022B97C819764881003CF3E6 /* Images.xcassets */,
 				022B97B719764881003CF3E6 /* Supporting Files */,
 			);
@@ -150,6 +169,15 @@
 				022B97D819764881003CF3E6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		022B97EE197653C0003CF3E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				022B97EF197653DD003CF3E6 /* CCTask.h */,
+				022B97F0197653DD003CF3E6 /* CCTask.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				022B97C119764881003CF3E6 /* CCAppDelegate.m in Sources */,
+				022B97EA1976490E003CF3E6 /* CCDetailTaskViewController.m in Sources */,
+				022B97E7197648FE003CF3E6 /* CCAddTaskViewController.m in Sources */,
 				022B97BD19764881003CF3E6 /* main.m in Sources */,
+				022B97F1197653DD003CF3E6 /* CCTask.m in Sources */,
 				022B97C719764881003CF3E6 /* CCViewController.m in Sources */,
+				022B97ED19764918003CF3E6 /* CCEditTaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
